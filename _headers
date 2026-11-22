@@ -3,11 +3,17 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
-/assets/*
+/assets/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/images/*
   Cache-Control: public, max-age=31536000, immutable
 
 /assets/js/config.js
   Cache-Control: public, max-age=300, must-revalidate
+
+/assets/js/app.js
+  Cache-Control: public, max-age=3600
 
 /api/*
   X-Robots-Tag: noindex, nofollow
